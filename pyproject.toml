@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool]
+name = "hunyuan_video"
+version = "0.1.0"
+description = "A framework for large video generation models based on the Hunyuan project."
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/Tencent/HunyuanVideo"
+repository = "https://github.com/Tencent/HunyuanVideo"
+keywords = ["video generation", "deep learning", "Hunyuan"]
+
+[project]
+dependencies = [
+    "torch==2.4.0",
+    "torchvision==0.19.0",
+    "torchaudio==2.4.0",
+    "opencv-python==4.9.0.80",
+    "diffusers==0.31.0",
+    "transformers==4.46.3",
+    "tokenizers==0.20.3",
+    "accelerate==1.1.1",
+    "pandas==2.0.3",
+    "numpy==1.24.4",
+    "einops==0.7.0",
+    "tqdm==4.66.2",
+    "loguru==0.7.2",
+    "imageio==2.34.0",
+    "imageio-ffmpeg==0.5.1",
+    "safetensors==0.4.3",
+    "gradio==5.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=22.0",
+    "flake8>=4.0"
+]
