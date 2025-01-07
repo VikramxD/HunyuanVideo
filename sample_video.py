@@ -3,7 +3,6 @@ import time
 from pathlib import Path
 from loguru import logger
 from datetime import datetime
-
 from hyvideo.utils.file_utils import save_videos_grid
 from hyvideo.config import parse_args
 from hyvideo.inference import HunyuanVideoSampler
