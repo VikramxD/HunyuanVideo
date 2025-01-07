@@ -3,21 +3,19 @@ import time
 import random
 import functools
 from typing import List, Optional, Tuple, Union
-
 from pathlib import Path
 from loguru import logger
-
 import torch
 import torch.distributed as dist
-from hyvideo.constants import PROMPT_TEMPLATE, NEGATIVE_PROMPT, PRECISION_TO_TYPE
-from hyvideo.vae import load_vae
-from hyvideo.modules import load_model
-from hyvideo.text_encoder import TextEncoder
-from hyvideo.utils.data_utils import align_to
-from hyvideo.modules.posemb_layers import get_nd_rotary_pos_embed
-from hyvideo.modules.fp8_optimization import convert_fp8_linear
-from hyvideo.diffusion.schedulers import FlowMatchDiscreteScheduler
-from hyvideo.diffusion.pipelines import HunyuanVideoPipeline
+from hunyuan.hyvideo.constants import PROMPT_TEMPLATE, NEGATIVE_PROMPT, PRECISION_TO_TYPE
+from hunyuan.hyvideo.vae import load_vae
+from hunyuan.hyvideo.modules import load_model
+from hunyuan.hyvideo.text_encoder import TextEncoder
+from hunyuan.hyvideo.utils.data_utils import align_to
+from hunyuan.hyvideo.modules.posemb_layers import get_nd_rotary_pos_embed
+from hunyuan.hyvideo.modules.fp8_optimization import convert_fp8_linear
+from hunyuan.hyvideo.diffusion.schedulers import FlowMatchDiscreteScheduler
+from hunyuan.hyvideo.diffusion.pipelines import HunyuanVideoPipeline
 
 try:
     import xfuser
