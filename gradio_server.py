@@ -134,7 +134,7 @@ def create_demo(model_path, save_path):
 if __name__ == "__main__":
     os.environ["GRADIO_ANALYTICS_ENABLED"] = "False"
     server_name = os.getenv("SERVER_NAME", "0.0.0.0")
-    server_port = int(os.getenv("SERVER_PORT", "8081"))
+    server_port = int(os.getenv("SERVER_PORT", "8000"))
     args = parse_args()
     print(args)
     demo = create_demo(args.model_base, args.save_path)
