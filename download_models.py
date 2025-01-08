@@ -51,7 +51,7 @@ def main():
     """
     Main script to download the HunyuanVideo model, MLLM text encoder, and CLIP text encoder.
     """
-    base_dir = "HunyuanVideo/ckpts"
+    base_dir = "ckpts"
     os.makedirs(base_dir, exist_ok=True)
 
     try:
